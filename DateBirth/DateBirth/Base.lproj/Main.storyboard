@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DateBirth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите дату рождения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-ia-TNX">
+                                <rect key="frame" x="74" y="155" width="245" height="82"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="24"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-sl-5wQ">
+                                <rect key="frame" x="36.666666666666657" y="257" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="ru_RU"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="iwW-7m-JSF"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для продолжения, нажмите кнопку &quot;Далее&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TC-bP-9h2">
+                                <rect key="frame" x="20.333333333333343" y="493" width="352.66666666666663" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.18446675169999999" blue="0.21764801819999999" alpha="0.5959270244" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opi-K4-YEe">
+                                <rect key="frame" x="159.33333333333334" y="533.33333333333337" width="74.333333333333343" height="35"/>
+                                <color key="backgroundColor" red="0.97645120539999997" green="0.30212615120000003" blue="1" alpha="0.5959270244" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Далее"/>
+                                <connections>
+                                    <action selector="actionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMA-tJ-ito"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Opi-K4-YEe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qv-CG-x18"/>
+                            <constraint firstItem="LWe-sl-5wQ" firstAttribute="top" secondItem="R5J-ia-TNX" secondAttribute="bottom" constant="20" id="CT6-87-IXK"/>
+                            <constraint firstItem="R5J-ia-TNX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="DbI-Aq-KkZ"/>
+                            <constraint firstItem="Opi-K4-YEe" firstAttribute="top" secondItem="6TC-bP-9h2" secondAttribute="bottom" constant="20" id="MkZ-fj-OaJ"/>
+                            <constraint firstItem="6TC-bP-9h2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U9P-8e-7zG"/>
+                            <constraint firstItem="R5J-ia-TNX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vyf-GF-U0W"/>
+                            <constraint firstItem="LWe-sl-5wQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YJu-v5-xUe"/>
+                            <constraint firstItem="6TC-bP-9h2" firstAttribute="top" secondItem="LWe-sl-5wQ" secondAttribute="bottom" constant="20" id="ZgG-Ke-iFV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="LWe-sl-5wQ" id="D8Y-V6-oea"/>
+                        <outlet property="infoButton" destination="Opi-K4-YEe" id="RRC-7N-4tp"/>
+                        <outlet property="infoLabel" destination="6TC-bP-9h2" id="3Jz-WY-lGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
